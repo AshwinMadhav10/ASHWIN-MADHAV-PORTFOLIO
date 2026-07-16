@@ -5,68 +5,31 @@ function ProjectCard({ project }) {
   return (
     <motion.article
       layout
-      initial={{ opacity: 0, y: 26 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 16 }}
-      whileHover={{ y: -8, scale: 1.01 }}
-      transition={{ type: "spring", stiffness: 240, damping: 22 }}
-      className="surface group relative flex h-full flex-col overflow-hidden rounded-3xl p-5 transition hover:-translate-y-1 hover:border-cobalt/40"
+      exit={{ opacity: 0, y: 12 }}
+      whileHover={{ x: 6 }}
+      transition={{ type: "spring", stiffness: 280, damping: 22 }}
+      className="flex items-center gap-4 rounded-xl border border-line/80 bg-canvas/45 p-4 transition hover:border-cobalt/35 hover:bg-cobalt/10"
     >
-      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cobalt/70 to-transparent opacity-0 transition group-hover:opacity-100" />
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <span className="rounded-full bg-cobalt/10 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-cobalt">
-            {project.category}
-          </span>
-          <h3 className="mt-5 text-2xl font-black leading-tight tracking-tight text-ink">{project.title}</h3>
-          <p className="mt-2 font-bold text-muted">{project.subtitle}</p>
-        </div>
-      </div>
-
-      <p className="mt-5 leading-7 text-muted">{project.description}</p>
-
-      <div className="mt-6 flex flex-wrap gap-2">
-        {project.technologies.map((tech) => (
-          <span key={tech} className="chip">
-            {tech}
-          </span>
-        ))}
-      </div>
-
-
-
-      <div className="mt-auto flex flex-wrap gap-3 pt-7">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-line bg-paper/80 px-4 py-2 text-sm font-black text-ink outline-none transition hover:border-cobalt/40 hover:bg-cobalt/5 focus-visible:ring-2 focus-visible:ring-cobalt"
-        >
-          <FaGithub aria-hidden="true" />
-          GitHub
-        </a>
-        {project.demo ? (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-line bg-paper/80 px-4 py-2 text-sm font-black text-ink outline-none transition hover:border-cobalt/40 hover:bg-cobalt/5 focus-visible:ring-2 focus-visible:ring-cobalt"
-          >
-            <FaExternalLinkAlt aria-hidden="true" />
-            Live Demo
+      <div className="flex-1">
+        <p className="text-[10px] font-black uppercase tracking-widest text-coral mb-1">{project.category}</p>
+        <h3 className="font-black text-ink text-lg leading-tight">{project.title}</h3>
+        <p className="mt-1 text-sm text-muted line-clamp-2">{project.subtitle}</p>
+        
+        <div className="mt-3 flex flex-wrap gap-4">
+          <a href={project.github} target="_blank" rel="noreferrer" className="text-xs font-bold text-cobalt hover:underline inline-flex items-center gap-1.5">
+            <FaGithub /> GitHub
           </a>
-        ) : (
-          <span className="inline-flex items-center rounded-full border border-line bg-canvas/60 px-4 py-2 text-sm font-bold text-muted">
-            Demo pending
-          </span>
-        )}
-        <a
-          href={project.caseStudy}
-          className="inline-flex items-center gap-2 rounded-full bg-cobalt px-4 py-2 text-sm font-black text-ink outline-none transition hover:bg-green focus-visible:ring-2 focus-visible:ring-cobalt"
-        >
-          View Case Study
-          <FaArrowRight className="transition group-hover:translate-x-1" aria-hidden="true" />
-        </a>
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noreferrer" className="text-xs font-bold text-cobalt hover:underline inline-flex items-center gap-1.5">
+              <FaExternalLinkAlt /> Demo
+            </a>
+          )}
+          <a href={project.caseStudy} className="text-xs font-black text-ink hover:underline inline-flex items-center gap-1.5 ml-auto">
+            Case Study <FaArrowRight />
+          </a>
+        </div>
       </div>
     </motion.article>
   );

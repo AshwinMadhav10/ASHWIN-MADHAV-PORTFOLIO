@@ -29,13 +29,13 @@ function Hero() {
           <motion.p variants={item} className="section-kicker mb-5">
             AI Portfolio
           </motion.p>
-          <motion.h1 variants={item} className="hero-title text-balance text-4xl font-black leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
+          <motion.h1 variants={item} className="hero-title text-balance text-3xl font-black leading-[0.98] tracking-tight sm:text-4xl lg:text-5xl">
             Ashwin Madhav A
           </motion.h1>
-          <motion.p variants={item} className="mt-6 max-w-2xl text-xl font-black leading-8 text-ink-soft sm:text-2xl">
+          <motion.p variants={item} className="mt-4 max-w-2xl text-lg font-black leading-8 text-ink-soft sm:text-xl">
             AI Engineer
           </motion.p>
-          <motion.p variants={item} className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+          <motion.p variants={item} className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
             I build intelligent applications using Python, machine learning, large language models, RAG pipelines, NLP,
             backend APIs, and workflow automation. I focus on creating practical AI solutions for education, recruitment,
             CRM, analytics, and business automation.
