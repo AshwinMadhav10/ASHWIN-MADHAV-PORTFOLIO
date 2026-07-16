@@ -24,7 +24,7 @@ function Hero() {
 
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-5 pb-16 pt-28 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
         <motion.div variants={container} initial="hidden" animate="show" className="max-w-3xl">
           <motion.p variants={item} className="section-kicker mb-5">
             AI Portfolio
@@ -83,11 +83,11 @@ function Hero() {
           transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
           className="relative"
         >
-          <div className="hero-panel relative mx-auto max-w-[34rem] overflow-hidden rounded-[2rem] p-5 sm:p-6">
+          <div className="hero-panel relative mx-auto max-w-[24rem] overflow-hidden rounded-[1.5rem] p-3 sm:p-4">
             <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-green/70 to-transparent" />
             <div className="absolute right-0 top-0 h-28 w-28 border-b border-l border-line bg-coral/10" />
-            <div className="relative rounded-[1.45rem] border border-line/80 bg-paper/72 p-5 shadow-card">
-              <div className="flex items-start justify-between gap-5 border-b border-line pb-5">
+            <div className="relative rounded-[1.2rem] border border-line/80 bg-paper/72 p-4 shadow-card">
+              <div className="flex items-start justify-between gap-4 border-b border-line pb-4">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.18em] text-cobalt">Selected Focus</p>
                   <h2 className="mt-2 text-2xl font-black tracking-tight text-ink">Production AI workflows</h2>
