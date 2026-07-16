@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
       exit={{ opacity: 0, y: 16 }}
       whileHover={{ y: -6, scale: 1.01 }}
       transition={{ type: "spring", stiffness: 240, damping: 22 }}
-      className="surface group relative flex h-full flex-col overflow-hidden rounded-2xl p-4 sm:p-5 transition hover:-translate-y-1 hover:border-cobalt/40"
+      className="surface group relative flex h-full flex-col overflow-hidden rounded-2xl p-3 sm:p-4 transition hover:-translate-y-1 hover:border-cobalt/40"
     >
       <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cobalt/70 to-transparent opacity-0 transition group-hover:opacity-100" />
       <div className="flex items-start justify-between gap-4">
@@ -18,36 +18,36 @@ function ProjectCard({ project }) {
           <span className="rounded-full bg-cobalt/10 px-2 py-1 text-[10px] font-black uppercase tracking-widest text-cobalt">
             {project.category}
           </span>
-          <h3 className="mt-3 text-xl font-black leading-tight tracking-tight text-ink">{project.title}</h3>
-          <p className="mt-1 text-sm font-bold text-muted">{project.subtitle}</p>
+          <h3 className="mt-2 text-lg font-black leading-tight tracking-tight text-ink">{project.title}</h3>
+          <p className="mt-1 text-xs font-bold text-muted">{project.subtitle}</p>
         </div>
       </div>
 
-      <p className="mt-3 text-sm leading-6 text-muted">{project.description}</p>
+      <p className="mt-2 text-xs leading-5 text-muted">{project.description}</p>
 
-      <div className="mt-4 flex flex-wrap gap-1.5">
+      <div className="mt-3 flex flex-wrap gap-1">
         {project.technologies.map((tech) => (
-          <span key={tech} className="chip text-[10px] px-2 py-0.5">
+          <span key={tech} className="chip text-[9px] px-1.5 py-0.5">
             {tech}
           </span>
         ))}
       </div>
 
-      <ul className="mt-4 grid gap-1.5">
+      <ul className="mt-3 grid gap-1">
         {project.features?.slice(0, 4).map((feature, index) => (
           <motion.li
             key={feature}
-            className="flex gap-2 text-xs leading-5 text-muted"
+            className="flex gap-1.5 text-[11px] leading-snug text-muted"
             whileHover={{ x: 2 }}
             transition={{ type: "spring", stiffness: 320, damping: 24, delay: index * 0.005 }}
           >
-            <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-green" />
+            <span className="mt-1 h-1 w-1 flex-none rounded-full bg-green" />
             {feature}
           </motion.li>
         ))}
       </ul>
 
-      <div className="mt-auto flex flex-wrap gap-2 pt-5">
+      <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
         <a
           href={project.github}
           target="_blank"

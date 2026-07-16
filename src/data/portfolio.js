@@ -193,7 +193,6 @@ export const skillGroups = [
   },
   { title: "Databases", icon: FaDatabase, skills: ["PostgreSQL", "MySQL", "SQLite", "ChromaDB"] },
   { title: "Automation Tools", icon: FaTools, skills: ["n8n", "Zapier", "Make.com", "Zoho CRM", "Google Calendar Integration"] },
-  { title: "Professional Skills", icon: FaUsers, skills: ["Communication", "Leadership", "Collaboration", "Time Management", "Adaptability", "Flexibility"] },
 ];
 
 export const techIcons = [
