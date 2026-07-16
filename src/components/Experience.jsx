@@ -23,7 +23,7 @@ function Experience() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.55 }}
                 whileHover={{ x: 6 }}
-                className="surface relative rounded-3xl p-6 sm:ml-14 sm:p-8"
+                className="surface relative rounded-3xl p-5 sm:ml-14 sm:p-6"
               >
                 <span className="absolute -left-[3.4rem] top-8 hidden h-10 w-10 rounded-full border border-line bg-paper shadow-crisp sm:grid sm:place-items-center">
                   <span className="pulse-dot h-3 w-3 rounded-full bg-green" />

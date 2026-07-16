@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
       exit={{ opacity: 0, y: 16 }}
       whileHover={{ y: -8, scale: 1.01 }}
       transition={{ type: "spring", stiffness: 240, damping: 22 }}
-      className="surface group relative flex h-full flex-col overflow-hidden rounded-3xl p-6 transition hover:-translate-y-1 hover:border-cobalt/40"
+      className="surface group relative flex h-full flex-col overflow-hidden rounded-3xl p-5 transition hover:-translate-y-1 hover:border-cobalt/40"
     >
       <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cobalt/70 to-transparent opacity-0 transition group-hover:opacity-100" />
       <div className="flex items-start justify-between gap-4">
@@ -33,19 +33,7 @@ function ProjectCard({ project }) {
         ))}
       </div>
 
-      <ul className="mt-6 grid gap-2">
-        {project.features.slice(0, 6).map((feature, index) => (
-          <motion.li
-            key={feature}
-            className="flex gap-3 text-sm leading-6 text-muted"
-            whileHover={{ x: 4 }}
-            transition={{ type: "spring", stiffness: 320, damping: 24, delay: index * 0.005 }}
-          >
-            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-green" />
-            {feature}
-          </motion.li>
-        ))}
-      </ul>
+
 
       <div className="mt-auto flex flex-wrap gap-3 pt-7">
         <a

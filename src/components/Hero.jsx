@@ -29,11 +29,11 @@ function Hero() {
           <motion.p variants={item} className="section-kicker mb-5">
             AI Portfolio
           </motion.p>
-          <motion.h1 variants={item} className="hero-title text-balance text-5xl font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-8xl">
+          <motion.h1 variants={item} className="hero-title text-balance text-4xl font-black leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
             Ashwin Madhav A
           </motion.h1>
           <motion.p variants={item} className="mt-6 max-w-2xl text-xl font-black leading-8 text-ink-soft sm:text-2xl">
-            AI/ML Engineer | Python Developer | LLM & RAG Application Developer
+            AI Engineer
           </motion.p>
           <motion.p variants={item} className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
             I build intelligent applications using Python, machine learning, large language models, RAG pipelines, NLP,
@@ -95,24 +95,23 @@ function Hero() {
                 <span className="rounded-full bg-green px-3 py-1 text-xs font-black text-ink">Open</span>
               </div>
 
-              <div className="grid gap-3 py-5">
+              <div className="grid gap-2 py-4">
                 {[
-                  ["01", "RAG systems", "PDF ingestion, vector search, contextual answers"],
-                  ["02", "Automation", "CRM, recruitment, scheduling, notifications"],
-                  ["03", "Backend APIs", "FastAPI services, databases, integrations"],
-                ].map(([number, title, copy]) => (
+                  ["01", "RAG systems"],
+                  ["02", "Automation"],
+                  ["03", "Backend APIs"],
+                ].map(([number, title]) => (
                   <motion.div
                     key={title}
-                    className="grid grid-cols-[3rem_1fr] gap-4 rounded-2xl border border-line/80 bg-canvas/45 p-4 transition hover:border-cobalt/35 hover:bg-cobalt/10"
+                    className="flex items-center gap-4 rounded-xl border border-line/80 bg-canvas/45 p-3 transition hover:border-cobalt/35 hover:bg-cobalt/10"
                     whileHover={{ x: 6 }}
                     transition={{ type: "spring", stiffness: 280, damping: 22 }}
                   >
                     <span className="font-black text-coral">{number}</span>
-                    <div>
+                    <div className="flex-1">
                       <p className="font-black text-ink">{title}</p>
-                      <p className="mt-1 text-sm leading-6 text-muted">{copy}</p>
                       <motion.div
-                        className="mt-3 h-1 rounded-full bg-gradient-to-r from-cobalt via-green to-coral"
+                        className="mt-2 h-1 rounded-full bg-gradient-to-r from-cobalt via-green to-coral"
                         initial={{ width: "32%" }}
                         animate={{ width: ["32%", "76%", "48%"] }}
                         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: Number(number) * 0.25 }}
@@ -122,17 +121,17 @@ function Hero() {
                 ))}
               </div>
 
-              <div className="border-t border-line pt-5">
+              <div className="border-t border-line pt-4">
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-muted">Core toolchain</p>
-                <div className="mt-4 grid grid-cols-4 gap-2 sm:grid-cols-7">
-                  {techIcons.slice(0, 14).map(({ name, icon: Icon }, index) => (
+                <div className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-7">
+                  {techIcons.slice(0, 7).map(({ name, icon: Icon }, index) => (
                     <motion.div
                       key={name}
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.28 + index * 0.025 }}
                       whileHover={{ y: -6, scale: 1.06, rotate: index % 2 === 0 ? -2 : 2 }}
-                      className="grid aspect-square place-items-center rounded-2xl border border-line/80 bg-canvas/45 text-cobalt transition hover:-translate-y-1 hover:border-green/50 hover:bg-green/10 hover:text-green"
+                      className="grid aspect-square place-items-center rounded-xl border border-line/80 bg-canvas/45 text-cobalt transition hover:-translate-y-1 hover:border-green/50 hover:bg-green/10 hover:text-green"
                       title={name}
                     >
                       <Icon className="text-xl" aria-hidden="true" />
